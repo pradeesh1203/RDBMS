@@ -1,0 +1,139 @@
+GROUP BY & SUBQUERIES
+
+AIM:
+
+To execute simple queries using sorting and group by operations
+
+SQL> create table branch2 (bcode varchar2(5),custname varchar2(15),bname varchar2(20),balance 
+
+number(5));
+
+Table created.
+
+SQL> desc branch2;
+
+Name Null? Type
+
+----------------------------------------- -------- ----------------------------
+
+BCODE VARCHAR2(5)
+
+CUSTNAME VARCHAR2(15)
+
+BNAME VARCHAR2(20)
+
+BALANCE NUMBER(5)
+
+SQL>insert into branch2 values(‘&bcode’,’&custname’,’&bname’,&balance);
+
+Enter value for branchcode: 01
+
+Enter value for custname: vibi
+
+Enter value for branchname: ganapathy
+
+Enter value for balance: 6000
+
+old 1: insert into branch2 values('&branchcode','&custname','&branchname',&balance)
+
+new 1: insert into branch2 values('01','vibi','ganapathy',6000)
+
+1 row created.
+SQL> select*from branch2;
+
+BCODE CUSTNAME BNAME BALANCE
+
+----- --------------- ---------------- -----------------
+
+01 vibi ganapathy 6000
+
+02 hari rspuram 7000
+
+03 shalu thudiyalur 4000
+
+04 surya sathy 5000
+
+1.GROUP BY
+
+SQL> select bname,avg(balance) from branch2
+
+ 2 group by bname;
+
+BNAME AVG(BALANCE)
+
+-------------------- ------------
+
+ganapathy 6000
+
+rspuram 7000
+
+thudiyalur 4000
+
+sathy 5000
+
+2.SORTING(ORDER BY):
+
+a.DESCENDING 
+
+SQL>select bname,balance 
+
+from branch2
+
+ 2 order by bname desc;
+
+BNAME BALANCE
+
+-------------------- ----------
+
+thudiyalur 4000
+
+sathy 5000
+
+rspuram 7000
+
+ganapathy 6000
+b.ASCENDING
+
+SQL> select bname,balance from branch2
+
+ 2 order by bname asc;
+
+BNAME BALANCE
+
+-------------------- --------------
+
+ganapathy 6000
+
+rspuram 7000
+
+sathy 5000
+
+thudiyalur 4000
+
+ 3.SUBQUERIES:
+
+ 
+
+SQL>select bcode,custname from branch2 where bcode not in(select custname from branch2);
+
+BCODE CUSTNAME
+
+------ -----------------------
+
+01 vibi
+
+02 hari
+
+03 shalu
+
+04 surya
+
+SQL>commit;
+
+commit complete. 
+
+RESULT:
+
+ 
+
+The above queries has been executed successfully and the result is verified.
