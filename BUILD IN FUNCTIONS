@@ -1,0 +1,165 @@
+BUILT IN FUNCTIONS
+
+( CHARACTER & DATE FUNCTIONS)
+
+AIM:
+
+To execute simple queries using built in functions
+
+CHARACTER FUNCTIONS
+
+1.LOWER:
+
+SQL> select * from student2aiml;
+
+REGNO NAME PERCENTAGE RANK
+
+-------- --------------- ---------------------- -------------
+
+01 vibi 85 3
+
+02 shalu 67 9
+
+03 hari 69 7
+
+04 surya 78 5
+
+05 dinesh 56 10
+
+ 
+
+SQL> select lower(name)"lower" from student2aiml;
+
+ lower
+
+---------------
+
+vibi
+
+shalu
+
+hari
+
+surya
+
+dinesh
+
+UPPER:
+
+SQL> select upper(name)"upper" from student2aiml;
+upper
+
+---------------
+
+VIBI
+
+SHALU
+
+HARI
+
+SURYA
+
+DINESH
+
+2.CONCAT:
+
+SQL> select concat(name,regno)"concat"from
+
+student2aiml;
+
+concat
+
+-----------------------
+
+vibi01
+
+shalu02
+
+hari03
+
+surya04
+
+dinesh05
+
+4.LPAD:
+
+SQL> select lpad('vibi',10,'*')"lpad" from dual;
+
+lpad
+
+******vibi
+5.RPAD:
+
+SQL> select rpad('vibi',10,'*') from dual;
+
+RPAD('VIBI
+
+vibi******
+
+6.LTRIM:
+
+SQL> select ltrim('*******vibi','*') from dual;
+
+LTRIM
+
+vibi
+
+7.RTRIM:
+
+SQL> select rtrim('vibi*******','*') from dual;
+
+RTRI
+
+vibi
+
+8.LENGTH:
+
+SQL> select length('vibi') from dual;
+
+LENGTH('VIBI')
+
+4
+DATE FUNCTIONS
+
+1.SYSDATE:
+
+SQL> select sysdate from dual;
+
+SYSDATE
+
+31-JAN-24
+
+2.MONTHS-BETWEEN(D1,D2):
+
+SQL> select months_between('12-DEC-2020','12-DEC-2020') from dual;
+
+MONTHS_BETWEEN('12-DEC-2020','12-DEC-2020')
+
+0
+
+3.ADD-MONTHS(D,N): 
+
+SQL> select add_months(sysdate,3) from dual;
+
+ADD_MONTH
+
+31-APR-24
+4.LAST-DAY(D):
+
+SQL> select last_day(sysdate) from dual;
+
+LAST_DAY(
+
+31-JAN-24
+
+5.NEXT-DAY(D,CHAR):
+
+SQL> select next_day(sysdate,'monday') from dual;
+
+NEXT_DAY(
+
+05-FEB-24
+
+RESULT:
+
+The above queries has been executed successfully and the result is verified.
