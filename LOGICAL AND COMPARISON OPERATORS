@@ -1,0 +1,111 @@
+AIM:
+
+To execute simple queries using logical and comparison operators.
+
+COMPARISON OPERATORS
+
+ Select * from student202;
+
+ REGNO NAME PERCENTAGE RANK
+
+ -------- --------------- ---------------- --------------
+
+ 05 arav 96 2
+
+ 31 ram 92 3
+
+ 32 rani 88 4
+
+1.GREATER THEN OR EQUALTO:
+
+SQL> select name from student
+
+2 where percentage>=90;
+
+NAME
+
+ ------------------
+
+Arav
+
+ram2.LESS THEN OR EQUALTO:
+
+SQL> select name,regno from student202
+
+2 where percentage<90;
+
+NAME REGNO
+
+arav 05
+
+ram 31
+
+3.BETWEEN:
+
+SQL> select * from student202
+
+2 where percentage between 88and 96;
+
+REGNO NAME PERCENTAGE
+
+05 arav 96
+
+31 ram 92
+
+ 32 rani 88
+
+4.IN:
+
+SQL> select * from student202
+
+2 where percentage in(92);
+
+REGNO NAME PERCENTAGE
+
+31 ram 92
+5.LIKE:
+
+SQL> select * from 
+
+student202
+
+where name like'R%';
+
+REGNO NAME PERCENTAGE
+
+ 
+
+ 31 ram 92
+
+ 32 rani 88
+
+LOGICAL OPERATORS
+
+1.AND:
+
+SQL> select * from student202
+
+2 where percentage>88 and percentage<96;
+
+REGNO NAME PERCENTAGE
+
+ O5 arav 96
+
+ 31 ram 92
+
+ 32 rani 88
+
+2.OR:
+
+SQL> select * from student202
+
+2 where percentage=88 OR percentage=96;
+
+REGNO NAME PERCENTAGE
+
+05 arav 96
+
+ 32 rani 88
+SQL>commit;
+
+Commit complete.
