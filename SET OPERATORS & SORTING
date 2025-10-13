@@ -1,0 +1,196 @@
+Ex.No: SET OPERATORS & SORTING
+
+Date: OPERATOR
+
+AIM:
+
+To execute simple queries using set operators
+
+SQL> create table account023(custno varchar2(4),custname
+
+varchar2(15),accnovarchar2(4),balamount number(10));
+
+Table created.
+
+SQL> insert into account values('&custno','&custname','&accno',&balamount);
+
+Enter value for custno: A025
+
+Enter value for custname: divya
+
+Enter value for accno: c001
+
+Enter value for balamount: 7000
+
+old 1: insert into account023 values('&custno','&custname','&accno',&balamount)new
+
+1: insert into account023 values('A025','divya','c001',7000)
+
+1 row created.
+SQL> select * from account023;
+
+CUST CUSTNAME ACCN BALAMOUNT
+
+A025 divya c001 7000
+
+A026 maha c002 5000
+
+A027 devi c003 10000
+
+A028 harini c004 19000
+
+A029 vini coo5 25000
+
+SQL> create table loan023(custno varchar2(4),custname varchar2(15),loan
+
+varchar2(4),loanamountnumber
+
+(6));
+
+Table created.
+
+SQL> insert int0 loan023values('&custno','&custname','&loan',&loanamount);
+
+Enter value for custno: A026
+
+Enter value for custname: mahaEnter
+
+value for loan: H075
+
+Enter value for loanamount: 10000
+
+old 1: insert into loan023values('&custno','&custname','&loan',&loanamount)
+
+new 1: insert into loan023 values('A025',’maha','H075',10000)
+
+1 row created.
+SQL> select * from loan023;
+
+CUST CUSTNAME LOAN LOANAMOUNT
+
+A026 maha H075 100000
+
+A024 sowmiya H076 120000
+
+A030 menaka H077 80000
+
+A028 harini H078 180000
+
+A031 esthar H078 150000
+
+1.UNION:
+
+CUSTNAME
+
+divya maha
+
+devi harini vini
+
+sowmiya
+
+menaka esther
+
+8 rows selected.
+2.UNION ALL:
+
+SQL> select custname from account
+
+2 union all
+
+3 select custname from loan;
+
+CUSTNAME
+
+divya
+
+maha
+
+devi
+
+harinivini
+
+maha
+
+sowmiya
+
+menaka
+
+harini
+
+esthar
+
+10 rows selected.
+
+3.INTERSECT:
+
+SQL> select custname from account
+
+2 intersect
+
+3 select custname from loan;
+
+CUSTNAME
+
+maha
+
+harini
+4.MINUS:
+
+SQL> select custname from account
+
+2 minus
+
+3 select custname from loan;
+
+CUSTNAME
+
+divya
+
+devi
+
+vini
+
+SQL> select custname from loan
+
+2 minus
+
+3 select custname from account;
+
+CUSTNAME
+
+sowmiya
+
+menaka
+
+esthar
+
+2.SORTING(ORDER BY):
+
+a.DESCENDING 
+
+SQL> select custname,custno from account
+
+2 order by custname desc;
+CUSTNAME CUSTNO
+
+A031 vini
+
+A024 sowmiya
+
+A030 menaka
+
+A026 maha
+
+A028 harini
+
+b. ASCENDING
+
+SQL> select bname,balance from branch
+
+2 order by bname asc;
+
+BNAME BALANCE
+
+RESULT:
+
+The above queries has been executed successfully and the result is verified
