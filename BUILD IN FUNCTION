@@ -1,0 +1,175 @@
+Ex.No: BUILT IN FUNCTIONS
+
+ Date: (NUMBER & CONVERSION
+
+FUNCTION)
+
+ AIM:
+
+To execute simple queries using built in functions
+
+NUMBER FUNCTIONS
+
+1.ABS(n):
+
+ SQL> select ABS (-75)"Absolute" from dual;
+
+ Absolute
+
+----------
+
+ 75
+
+ 75
+
+ 75
+
+ 75
+
+2.CEIL(n):
+
+SQL> select ceil(15.7)"ceiling" from dual;
+
+ceiling
+
+16
+
+3.ROUND(n.m):
+
+SQL> select round(15.5)"round" from dual;
+
+round
+
+16
+SQL> select round(15.193,-1)"round" from dual;
+
+round
+
+20
+
+4.TRUNC(n,m):
+
+SQL> select trunc(15.79,1)"truncate" from dual;
+
+truncate
+
+15.7
+
+SQL> select trunc(15.79,-1)"truncate" from dual;
+
+truncate
+
+10
+
+5.MOD(m,n):
+
+SQL> select mod(11,4)"modulus" from dual;
+
+modulus
+
+3
+
+6.POWER(n,m):
+
+SQL> select power(3,2)"power"from dual;
+
+power
+
+9
+7.SQRT(n):
+
+SQL> select sqrt(26)"square root" from dual;
+
+square root
+
+5.0990195
+
+8.EXP(n):
+
+SQL> select exp(4)"exponent"from dual;
+
+exponent
+
+54.59815
+
+9.FLOOR(n):
+
+SQL> select floor(15.7)"floor" from dual;
+
+floor
+
+15
+
+10.SIGN(n):
+
+SQL> select sign(-15)"sign"from dual;
+
+sign
+
+-1
+
+11.LOG(m,n):
+
+SQL> select log(10,100)"logrithm"from dual;
+
+logrithm
+
+2
+12.SIN(n):
+
+SQL> select sin(30)"sine"from dual;
+
+sine
+
+-.9880316
+
+13.COS(n):
+
+SQL> select cos(30)"cosine"from dual;
+
+cosine
+
+.15425145
+
+14.TAN(n):
+
+SQL> select tan(30)"tangent"from dual;
+
+tangent
+
+-6.405331
+CONVERSION FUNCTIONS:
+
+1.TO_NUMBER(CHAR):
+
+SQL> select to_number(substr('20bai01',1,2))from dua l;
+
+TO_NUMBER(SUBSTR('20BAI01',1,2))
+
+16
+
+2.TO_CHAR:
+
+SQL> select to_char(sysdate,'month,yy')from dual;
+
+TO_CHAR(sysd
+
+january ,90
+
+SQL>select to_char(sysdate,’month,dd,yyyy’) from dual;
+
+TO_CHAR(SYSDATE,
+
+January,01,1990
+
+3.TO_DATE:
+
+SQL> select to_date('06-FEB-2020')from dual;
+
+TO_DATE
+
+06-FEB-2020
+
+RESULT:
+
+The above queries has been executed successfully and the result is verified.
