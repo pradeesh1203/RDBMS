@@ -1,0 +1,44 @@
+#include<iostream.h> 
+#include<conio.h> 
+class b; 
+class a 
+{ 
+int v1; 
+public: 
+a(int c) 
+{ 
+v1=c; 
+} 
+friend void swap(a,b); 
+}; 
+class b 
+{ 
+int v2; 
+public: 
+b(int d) 
+{ 
+v2=d; 
+} 
+friend void swap(a,b); 
+}; 
+void swap(a e,b f) 
+{ 
+cout<<"SWAP 2 VALUES USING FRIEND FUNCTON"; 
+cout<<"\n+++++++++++++++++++++++++++++++++"; 
+cout<<"\nBefore swapping value of a="<<e.v1<<"\n"; 
+cout<<"\nBefore swapping value of b="<<f.v2<<"\n"; 
+int temp; 
+temp = e.v1; 
+e.v1 = f.v2; 
+f.v2 = temp; 
+cout<<"\nafter swapping value of a="<<e.v1<<"\n"; 
+cout<<"\nafter swapping value of b="<<f.v2<<"\n"; 
+} 
+void main() 
+{ 
+clrscr(); 
+a e(5); 
+b f(3); 
+swap(e,f); 
+getch(); 
+}
