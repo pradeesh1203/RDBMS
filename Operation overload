@@ -1,0 +1,64 @@
+#include<iostream.h> 
+#include<conio.h> 
+class arith 
+{ 
+float num; 
+public: 
+arith() 
+{ 
+num=0; 
+} 
+void getdata() 
+{ 
+cout<<"Enter the value for float no:"; 
+cin>>num; 
+} 
+void putdata() 
+{ 
+cout<<"are = "<<num; 
+} 
+void operator+=(arith a); 
+void operator-=(arith b); 
+void operator*=(arith c); 
+void operator/=(arith d); 
+}; 
+void arith::operator+=(arith a) 
+{ 
+num+=a.num; 
+} void arith::operator-=(arith b) 
+{ 
+num-=b.num; 
+} 
+void arith::operator*=(arith c) 
+{ 
+num*=c.num; 
+} 
+void arith::operator/=(arith d) 
+{ 
+num/=d.num; 
+} 
+void main() 
+{ 
+clrscr(); 
+arith a,b,c; 
+a.getdata(); 
+b.getdata(); 
+c=a; 
+a+=b; 
+cout<<"\nOPERATOR OVERLOADING"; 
+cout<<"\n++++++++++++++++++++"; 
+cout<<"\nAfter addition of 2 objects "; 
+a.putdata(); 
+a=c; 
+a-=b; 
+cout<<"\nAfter subtraction of 2 objects "; 
+a.putdata(); a=c; 
+a*=b; 
+cout<<"\nAfter multiple of 2 objects "; 
+a.putdata(); 
+a=c; 
+a/=b; 
+cout<<"\nAfter division of 2 objects "; 
+a.putdata(); 
+getch(); 
+}
