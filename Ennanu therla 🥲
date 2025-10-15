@@ -1,0 +1,43 @@
+include<conio.h> 
+#include<conio.h> 
+#include<fstream.h> 
+void main() 
+{ 
+clrscr(); 
+char data[100]; 
+ofstream outfile; 
+outfile.open("mahi.txt"); 
+cout<<"writing to the file"<<endl; 
+cout<<"********************"; 
+cout<<"\nEnter your register no:"; 
+cin.getline(data,100); 
+outfile<<data<<endl; 
+cout<<"\nEnter your name:"; 
+cin>>data; 
+outfile<<data<<endl; 
+cout<<"\nEnter your tamil mark:"; 
+cin>>data; 
+outfile<<data<<endl; 
+cout<<"\nEnter your english mark:"; 
+cin>>data; 
+outfile<<data<<endl; 
+cout<<"\nEnter your maths mark:"; 
+cin>>data; 
+outfile<<data<<endl; 
+outfile.close(); 
+ifstream infile; 
+infile.open("mahi.txt"); 
+cout<<"reading from the file"<<endl; 
+cout<<"*********************"<<endl; 
+infile>>data; 
+cout<<data<<endl; 
+infile>>data; 
+cout<<data<<endl; 
+infile>>data; 
+cout<<data<<endl; 
+infile>>data; 
+cout<<data<<endl; 
+infile>>data; 
+cout<<data<<endl; 
+getch(); 
+}
