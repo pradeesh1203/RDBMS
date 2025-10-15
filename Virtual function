@@ -1,0 +1,48 @@
+#include<iostream.h> 
+#include<conio.h> 
+class b 
+{ 
+public: 
+virtual void show() 
+{ 
+cout<<"\nshowing base class...."; 
+} 
+void display() 
+{ 
+cout<<"\ndisplaying base class....\n"; 
+} 
+}; 
+class d:public b 
+{ 
+public: 
+void display() 
+{ 
+cout<<"\ndisplaying derived class....\n"; 
+} 
+void show() 
+{ 
+cout<<"\nshowing derived class...."; 
+} 
+}; 
+void main() 
+{ 
+clrscr(); 
+b B; 
+b *ptr; 
+cout<<"VIRTUAL FUNCTIONS\n"; 
+cout<<"*****************\n"; 
+cout<<"pointer points to base class:\n"; 
+ptr=&B; 
+ptr->display(); 
+ptr->show(); 
+cout<<"\npointer points to derived class:\n"; 
+d D; 
+ptr=&D; 
+cout<<" \nNON VIRTUAL FUNCTION CONTROL IN BASE CLASS ONLY"; 
+cout<<"\n***********************************************"; 
+ptr->display(); 
+cout<<"\nVIRTUAL FUNCTION CONTROL IN DERIVED CLASS"; 
+cout<<"\n*****************************************"; 
+ptr->show(); 
+getch(); 
+}
