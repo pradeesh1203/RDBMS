@@ -1,0 +1,52 @@
+Merge sort 
+
+include<conio.h> 
+#include<conio.h> 
+#include<fstream.h> 
+void main() 
+{ 
+clrscr(); 
+char data[100]; 
+ofstream outfile; 
+outfile.open("mahi.txt"); 
+cout<<"writing to the file"<<endl; 
+cout<<"********************"; 
+cout<<"\nEnter your register no:"; 
+cin.getline(data,100); 
+outfile<<data<<endl; 
+cout<<"\nEnter your name:"; 
+cin>>data; 
+outfile<<data<<endl; 
+cout<<"\nEnter your tamil mark:"; 
+cin>>data; 
+outfile<<data<<endl; 
+cout<<"\nEnter your english mark:"; 
+cin>>data; 
+outfile<<data<<endl; 
+cout<<"\nEnter your maths mark:"; 
+cin>>data; 
+outfile<<data<<endl; 
+outfile.close(); 
+ifstream infile;
+int mid; 
+   if(low < high) { 
+      mid = (low + high) / 2; 
+      sort(low, mid); 
+      sort(mid+1, high); 
+      merging(low, mid, high); 
+   } else { 
+      return; 
+   } 
+} 
+void main() { 
+   int i; 
+   clrscr(); 
+   printf("List before sorting\n"); 
+   for(i = 0; i <= max; i++) 
+      printf("%d ", a[i]); 
+   sort(0, max); 
+   printf("\nList after sorting\n"); 
+   for(i = 0; i <= max; i++) 
+      printf("%d ", a[i]); 
+      getch(); 
+}
